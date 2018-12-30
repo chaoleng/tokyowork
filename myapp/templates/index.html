@@ -6,45 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
 
-    <title>Starter Template for Bootstrap</title>
     <!-- Bootstrap core CSS -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
-  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
-  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="//cdn.bootcss.com/weui/0.4.3/style/weui.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/jquery-weui/0.8.3/css/jquery-weui.min.css">
+
+<!-- body 最后 -->
+<script src="//cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery-weui/0.8.3/js/jquery-weui.min.js"></script>
+
+<!-- 如果使用了某些拓展插件还需要额外的JS -->
+<script src="//cdn.bootcss.com/jquery-weui/0.8.3/js/swiper.min.js"></script>
+<script src="//cdn.bootcss.com/jquery-weui/0.8.3/js/city-picker.min.js"></script>
   </head>
+  <style type="text/css">
+    html,body{height: 100%;}
+
+  </style>
+  <script type="text/javascript">
+    $(function(){
+        $('.weui-tabbar_item').on('click', function () {
+            $(this).addClass('weui-bar_item_on').siblings('.weui-bar_item_on').removeClass('weui-bar_item_on');
+        });
+    });
+</script>
 
   <body>
 
-   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <form class="form-inline">
-    <div class="input-group">
-      <span class="input-group-addon"></span>
-      <input type="text" class="form-control" placeholder="Username">
-    </div>    
-  </form>
-</nav>
-<br>
 
 
-
-<div class="card" style="width: 80%;margin: 0 auto;height: 20%;" >
-  
-  <div class="card-body" style="height: 20%">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to </p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+  <div class="weui_tab">
+  <div class="weui_tab_bd">
+    <div id="tab1" class="weui_tab_bd_item weui_tab_bd_item_active">
+      <h1 class="doc-head">微信</h1>
+    </div>
+    <div id="tab2" class="weui_tab_bd_item">
+      <h1 class="doc-head">通讯录</h1>
+    </div>
+    <div id="tab3" class="weui_tab_bd_item">
+      <h1 class="doc-head">发现</h1>
+    </div>
+    <div id="tab4" class="weui_tab_bd_item">
+      <h1 class="doc-head">我的</h1>
+    </div>
   </div>
-    
-
-
-    <!-- jquery JavaScript -->
-    <script src="/static/js/jquery.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script src="/static/js/bootstrap.min.js"></script> 
-  
+  <div class="weui_tabbar">
+    <a href="#tab1" class="weui_tabbar_item weui_bar_item_on">
+      <div class="weui_tabbar_icon">
+        <img src="/images/icon_nav_button.png" alt="">
+      </div>
+      <p class="weui_tabbar_label">バイト</p>
+    </a>
+    <a href="#tab2" class="weui_tabbar_item">
+      <div class="weui_tabbar_icon">
+        <img src="/images/icon_nav_cell.png" alt="">
+      </div>
+      <p class="weui_tabbar_label">租房</p>
+    </a>
+    <a href="#tab3" class="weui_tabbar_item">
+      <div class="weui_tabbar_icon">
+        <img src="/images/icon_nav_toast.png" alt="">
+      </div>
+      <p class="weui_tabbar_label">帮带</p>
+    </a>
+    <a href="#tab4" class="weui_tabbar_item">
+      <div class="weui_tabbar_icon">
+        <img src="/static/images/1.png" alt="">
+      </div>
+      <p class="weui_tabbar_label ">我</p>
+    </a>
+  </div>
+</div>
 
 </body></html>
